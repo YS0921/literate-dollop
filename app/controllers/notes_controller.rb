@@ -12,7 +12,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(content: params[:note], user_id: @current_user.id)
     @note.save
-    redirect_to("/notes/#{@current_user.id}/top")
+    redirect_to("/")
   end
 
   def editor
@@ -23,7 +23,7 @@ class NotesController < ApplicationController
     @note = Note.find_by(id: params[:id])
     @note.content = params[:note]
     @note.save
-    redirect_to("/notes/#{@current_user.id}/top")
+    redirect_to("/")
   end
 
   def destroy_confirm
@@ -33,6 +33,6 @@ class NotesController < ApplicationController
   def destroy
     @note = Note.find_by(id: params[:id])
     @note.destroy
-    redirect_to("/notes/#{@current_user.id}/top")
+    redirect_to("/")
   end
 end

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'users/:id/setting_account' => 'users#setting_account'
   post 'users/:id/update_account' => 'users#update_account'
   
-  get 'notes/:id/top' => 'notes#top'
+  get '/' => 'notes#top'
   get 'notes/new' => 'notes#new'
   post 'notes/create' => 'notes#create'
   get 'notes/:id/editor' => 'notes#editor'

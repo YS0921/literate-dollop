@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      redirect_to("/notes/#{@current_user.id}/top")
+      redirect_to("/")
     end
   end
   
@@ -20,14 +20,14 @@ class UsersController < ApplicationController
     @user = User.new(name: params[:name], email: params[:email], password: params[:password], image_name: "default_user.jpg")
     @user.save
     session[:user_id] = @user.id
-    redirect_to("/notes/#{@current_user.id}/top")
+    redirect_to("/")
   end
   
   def login
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect_to("/notes/#{@user.id}/top")
+      redirect_to("/")
     else
       @email = params[:email]
       @password = params[:password]
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.profile = params[:profile]
     if @user.save
-      redirect_to("/notes/#{@user.id}/top")
+      redirect_to("/")
     else
       render("users/setting_profile")
     end
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   def update_account
     @current_user.email = params[:email]
     if @current_user.save
-      redirect_to("/notes/#{@current_user.id}/top")
+      redirect_to("/")
     else
       render("users/setting_account")
     end

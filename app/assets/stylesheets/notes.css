@@ -1,60 +1,60 @@
 @charset "UTF-8";
-/* ここからtop */
-.notes-top {
+/* ここからtopとdestroy */
+.notes-top, .notes-destroy {
   /* clearはfloat解除のための空の要素 */ }
-  .notes-top .top-wrapper {
+  .notes-top .top-wrapper, .notes-destroy .top-wrapper {
     background-color: white;
     border-radius: 10px;
     padding-bottom: 40px; }
-  .notes-top .profile {
+  .notes-top .profile, .notes-destroy .profile {
     text-align: center;
     padding-top: 50px;
     margin-top: 50px; }
-  .notes-top .profile h3 {
+  .notes-top .profile h3, .notes-destroy .profile h3 {
     font-weight: normal;
     font-size: 25px; }
-  .notes-top .profile-text p {
+  .notes-top .profile-text p, .notes-destroy .profile-text p {
     color: black; }
-  .notes-top .image-wrapper {
+  .notes-top .image-wrapper, .notes-destroy .image-wrapper {
     display: inline-block;
     width: 120px;
     height: 120px;
     position: relative;
     overflow: hidden;
     border-radius: 50%; }
-  .notes-top .image-wrapper img {
+  .notes-top .image-wrapper img, .notes-destroy .image-wrapper img {
     width: 130px;
     height: auto;
     position: absolute;
     left: -100%;
     right: -100%;
     margin: auto; }
-  .notes-top .note {
+  .notes-top .note, .notes-destroy .note {
     background-color: white;
     margin: 40px 0px;
     box-shadow: 0 0 4px #c0c0c0;
     border-radius: 10px;
     padding: 30px; }
-  .notes-top .date {
+  .notes-top .date, .notes-destroy .date {
     border-bottom: 1px solid black;
     color: black;
     font-size: 20px;
     margin-top: 0;
     line-height: 20px;
     padding: 10px; }
-  .notes-top span {
+  .notes-top span, .notes-destroy span {
     float: right; }
-  .notes-top .clear {
+  .notes-top .clear, .notes-destroy .clear {
     clear: both; }
-  .notes-top ul {
+  .notes-top ul, .notes-destroy ul {
     list-style: none; }
-  .notes-top .note-bottom li {
+  .notes-top .note-bottom li, .notes-destroy .note-bottom li {
     font-size: 20px; }
-  .notes-top .note-bottom span {
+  .notes-top .note-bottom span, .notes-destroy .note-bottom span {
     color: black;
     margin-right: 5px; }
 
-/* ここまでtop */
+/* ここまでtopとdestroy */
 /* ここからnewとeditor */
 .notes-editor .new-wrapper {
   text-align: center;
