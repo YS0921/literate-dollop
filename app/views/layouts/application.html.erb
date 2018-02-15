@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyNote</title>
+    <%= csrf_meta_tags %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <% if session[:user_id] %>
+          <div class="header-left">
+            <a href="<%="/notes/#{@current_user.id}/top" %>"> <img src="/logo.png" class="header-logo"> </a>
+          </div>
+          <div class="header-right">
+            <ul>
+              <li><%=link_to("/notes/new") do %><span class="fa fa-plus header-fa"></span> <% end %> </li>
+              <li><%=link_to("/users/#{@current_user.id}/setting_profile") do %> <span class="fa fa-cog header-fa"></span> <% end %></li>
+              <li><%=link_to("/users/logout", method: :post) do %> <span class="fa fa-sign-out header-fa"></span> <% end %></li>
+            </ul>
+          </div>
+        <% else %>
+          <div class="header-left">
+            <a href=""> <img src="/logo.png" class="header-logo"> </a>
+          </div>
+          <div class="header-right">
+            <ul>
+              <li><%=link_to("/users/sign_up") do %><span class="fa fa-user-plus header-fa"></span> <% end %> </li>
+              <li><%=link_to("/users/login_form") do %> <span class="fa fa-sign-in header-fa"></span> <% end %></li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </header>
+    
+    <div class="contents-wrapper">
+    <%= yield %>
+    </div>
+  </body>
+</html>

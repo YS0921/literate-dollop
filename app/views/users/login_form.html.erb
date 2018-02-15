@@ -1,0 +1,21 @@
+<div class="users-login-signup-form">
+
+  <div class="main">
+    <div class="login-form">
+      <img src="/logo.png">
+      <% if @error_message %>
+        <div class="error-message">
+          <p><%=@error_message %></p>
+        </div>
+      <% end %>
+      <%=form_tag("/users/login") do %>
+        <input type="text" name="email" placeholder="e-mail" value="<%=@email %>"><br>
+        <input type="password" name="password" placeholder="password" value="<%=@password %>"><br>
+        <input type="submit" class="btn login-button" name="login" value="ログイン">
+      <% end %>
+      <p class="or" >or</p>
+      <input type="submit" class="btn" value="新規登録" onClick="location.href='/users/sign_up'">
+    </div>
+  </div>
+  
+</div>

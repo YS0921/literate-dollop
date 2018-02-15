@@ -1,0 +1,14 @@
+<div class="notes-editor">
+  <div class="container">
+    <div class="new-wrapper">
+      <%=form_tag("/notes/#{@note.id}/update") do %>
+      <p class="date"><%=Date.current %></p>
+      <textarea name="note"><%=@note.content %></textarea><br>
+      <div class="new-button-wrapper">
+        <input type="submit" class="new-button" value="Update">
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

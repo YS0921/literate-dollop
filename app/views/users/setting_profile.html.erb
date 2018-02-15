@@ -1,0 +1,38 @@
+<div class="users-setting">
+  
+  <div class="main">
+      <div class="setting-tabs">
+        <ul>
+          <li class="setting-tab white-tab"><h3>プロフィール変更</h3></li>
+          <li class="setting-tab gray-tab"><%=link_to("/users/#{@current_user.id}/setting_account") do %><h3>アカウント情報</h3><% end %></li>
+        </ul>
+      </div>
+      
+      <div class="setting-list">
+        <div class="setting-box">
+          <%=form_tag("/users/#{@current_user.id}/update_profile") do %>
+          <ul>
+            <li>名前</li>
+            <input type="text", name="name", class="name", value="<%=@current_user.name %>">
+            <li>プロフィール文</li>
+            <textarea type="text", name="profile" class="profile-text"><%=@current_user.profile %></textarea>
+            <li>プロフィール画像</li>
+            <% @default_user_images.each do |image| %>
+            <img class="profile-images" src="/user_images/<%=image %>">
+            
+            <!-- 選択可能な画像 いずれ自分でアップロード可能に -->
+            
+            <!-- <li>プロフィール背景</li> -->
+            <!-- 選択可能な背景 あとで用意して項目に追加  -->
+            
+            <% end %>
+          </ul>
+          <div class="btn-wrapper">
+            <input type="submit" value="保存" class="profile-btn">
+          </div>
+          <% end %>
+        </div>
+      </div>
+      
+  </div>
+</div>

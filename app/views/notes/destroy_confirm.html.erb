@@ -1,0 +1,23 @@
+<div class="notes-destroy">
+
+<div class="container">
+  <div class="main">
+    <div class="confirmation">
+      <p>ノートを削除しますか？</p>
+    </div>
+    <div class="notes-wrapper">
+      <div class="note">
+        <p class="date"><%=@note.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[@note.created_at.wday]})")   %></p>
+        <div class="note-body">
+          <%=@note.content %>
+        </div>
+      </div>
+    </div>
+    <div class="destroy-button">
+      <%=link_to("キャンセル", "/top") %>
+      <%=link_to("削除", "/notes/#{@note.id}/destroy", method: :post) %>
+    </div>
+  </div>
+</div>
+
+</div>
