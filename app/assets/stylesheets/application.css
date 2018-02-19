@@ -28,13 +28,23 @@
 }
 
 .contents-wrapper {
-  padding-top: 100px
+  padding-top: 100px;
 }
 
 .main {
   width: 70%;
   margin: 0 auto;
   padding: 0;
+}
+  
+a {
+  text-decoration: none;
+}
+
+/* clearはfloat解除のための空の要素 */
+  
+.clear {
+  clear: both;
 }
 
  /* ここからheader */
@@ -53,7 +63,6 @@
    width: auto;
    box-sizing: border-box;
    padding-top: 5px;
-   padding-bottom: 0;
  }
 
  ul {
@@ -64,7 +73,6 @@
    float: left;
    color: white;
    font-size: 45px;
-   text-decoration: none;
  }
 
  .header-fa {

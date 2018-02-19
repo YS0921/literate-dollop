@@ -1,58 +1,53 @@
 @charset "UTF-8";
 /* ここからtopとdestroy */
-.notes-top, .notes-destroy {
-  /* clearはfloat解除のための空の要素 */ }
-  .notes-top .top-wrapper, .notes-destroy .top-wrapper {
-    background-color: white;
-    border-radius: 10px;
-    padding-bottom: 40px; }
-  .notes-top .profile, .notes-destroy .profile {
+.notes-top .top-wrapper, .notes-destroy .top-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 40px; }
+  .notes-top .top-wrapper .profile, .notes-destroy .top-wrapper .profile {
     text-align: center;
     padding: 50px 40px 0;
     margin-top: 50px; }
-  .notes-top .profile h3, .notes-destroy .profile h3 {
-    font-weight: normal;
-    font-size: 25px; }
-  .notes-top .profile-text p, .notes-destroy .profile-text p {
-    color: black; }
-  .notes-top .image-wrapper, .notes-destroy .image-wrapper {
+    .notes-top .top-wrapper .profile h3, .notes-destroy .top-wrapper .profile h3 {
+      font-weight: normal;
+      font-size: 25px; }
+    .notes-top .top-wrapper .profile p, .notes-destroy .top-wrapper .profile p {
+      color: black; }
+  .notes-top .top-wrapper .image-wrapper, .notes-destroy .top-wrapper .image-wrapper {
     display: inline-block;
     width: 120px;
     height: 120px;
     position: relative;
     overflow: hidden;
     border-radius: 50%; }
-  .notes-top .image-wrapper img, .notes-destroy .image-wrapper img {
-    width: 130px;
-    height: auto;
-    position: absolute;
-    left: -100%;
-    right: -100%;
-    margin: auto; }
-  .notes-top .note, .notes-destroy .note {
-    background-color: white;
-    margin: 40px 0px;
-    box-shadow: 0 0 4px #c0c0c0;
-    border-radius: 10px;
-    padding: 30px; }
-  .notes-top .date, .notes-destroy .date {
+    .notes-top .top-wrapper .image-wrapper img, .notes-destroy .top-wrapper .image-wrapper img {
+      width: 130px;
+      height: auto;
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      margin: auto; }
+.notes-top .note, .notes-destroy .note {
+  background-color: white;
+  margin: 40px 0px;
+  box-shadow: 0 0 4px #c0c0c0;
+  border-radius: 10px;
+  padding: 30px; }
+  .notes-top .note .date, .notes-destroy .note .date {
     border-bottom: 1px solid black;
     color: black;
     font-size: 20px;
     margin-top: 0;
     line-height: 20px;
     padding: 10px; }
-  .notes-top span, .notes-destroy span {
-    float: right; }
-  .notes-top .clear, .notes-destroy .clear {
-    clear: both; }
-  .notes-top ul, .notes-destroy ul {
-    list-style: none; }
-  .notes-top .note-bottom li, .notes-destroy .note-bottom li {
-    font-size: 20px; }
-  .notes-top .note-bottom span, .notes-destroy .note-bottom span {
+  .notes-top .note span, .notes-destroy .note span {
+    float: right;
     color: black;
     margin-right: 5px; }
+  .notes-top .note li, .notes-destroy .note li {
+    font-size: 20px; }
+  .notes-top .note ul, .notes-destroy .note ul {
+    list-style: none; }
 
 /* ここまでtopとdestroy */
 /* ここからnewとeditor */
@@ -61,28 +56,28 @@
   width: 80%;
   margin: 0 auto;
   padding-top: 50px; }
-.notes-editor .new-wrapper .date {
-  text-align: left;
-  width: 100%;
-  margin-bottom: 20px; }
-.notes-editor textarea {
-  height: 250px;
-  width: 100%;
-  border-radius: 5px;
-  font-size: 18px;
-  resize: none; }
-.notes-editor .new-button {
-  font-weight: normal;
-  display: inline-block;
-  padding: 0;
-  color: white;
-  font-size: 25px;
-  line-height: 40px;
-  float: right;
-  margin: 10px;
-  width: 100px;
-  background-color: #6e5b3b;
-  border-radius: 15px; }
+  .notes-editor .new-wrapper .date {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px; }
+  .notes-editor .new-wrapper textarea {
+    height: 250px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    resize: none; }
+  .notes-editor .new-wrapper .new-button {
+    font-weight: normal;
+    display: inline-block;
+    padding: 0;
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+    float: right;
+    margin: 10px;
+    width: 100px;
+    background-color: #6e5b3b;
+    border-radius: 15px; }
 
 /* ここまでnewとeditor */
 /* ここからdestroy-conrifm */

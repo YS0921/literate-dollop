@@ -3,22 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-  .main {
-    width: 100%;
-    height: 100%;
-    padding-top: 150px;
-  }
-  
-  a {
-    text-decoration: none;
-  }
+/* 定義 */
+$main: #f5e4c4;
   
 /* ここからloginとsignup */
 
 .users-login-signup-form {
-  body {
-    background-color: #f5e4c4;
-  }
   
   .login-form {
     background-color: #6e5b3b;
@@ -27,25 +17,43 @@
     margin: 100px auto;
     text-align: center;
     border-radius: 15px;
-  }
-  
-  p {
-    color: white;
-    line-height: 12px;
-  }
-  
-  .or {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  h1 {
-    font-size: 40px;
-    letter-spacing: 7px;
-    color: white;
-    font-family: monospace;
-    line-height: 10px;
-    margin-bottom: 50px;
+    
+    p {
+      color: white;
+      line-height: 12px;
+    }
+    
+    h1 {
+      font-size: 40px;
+      letter-spacing: 7px;
+      color: white;
+      font-family: monospace;
+      line-height: 10px;
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      color: white;
+      font-size: 30px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      letter-spacing: 5px;
+      font-weight: normal;
+    }
+    
+    img {
+      margin-bottom: 10px;
+      width: 280px;
+    }
+    
+    .btn {
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 10px;
+      border-style: none;
+      background-color: white;
+      border-radius: 2px;
+    }
   }
   
   input {
@@ -56,78 +64,45 @@
     width: 300px;
   }
   
-  img {
-    margin-bottom: 10px;
-    width: 280px;
-  }
-  
-  .btn {
-    cursor: pointer;
-    margin-top: 10px;
-    padding: 10px;
-    border-style: none;
-    background-color: white;
-    border-radius: 2px;
-  }
-
-  .signup-text {
-    color: white;
-    font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .signup-button {
-    margin-top: 10px;
-  }
-  
-  h2 {
-    letter-spacing: 5px;
-    font-weight: normal;
-  }
 }
 
 /* ここまでlodinとsignup */
 
+
+
 /* ここからsetting */
 
 .users-setting{
-  
-  .main {
-    padding-top: 20px;
-    padding-bottom: 100px;
-  }
   
   ul {
     margin: 0;
     padding: 0;
   }
   
-  .setting-tabs li {
-    float: left;
-    font-size: 15px;
-    line-height: 50px;
-    width: 180px;
-    margin: 0;
-  }
-  
-  .setting-tab {
-    margin: 0;
-    text-align: center;
+  .setting-tabs {
     
-    &:first-child {
-      border-radius: 30px 0 0 0;
+    .setting-tab {
+      float: left;
+      font-size: 15px;
+      line-height: 50px;
+      width: 180px;
+      margin: 0;
+      text-align: center;
+      
+      &:first-child {
+        border-radius: 30px 0 0 0;
+      }
     }
-  }
-  
-  .white-tab {
-    background-color: white;
-  }
-  
-  .gray-tab {
-    margin: 0;
-    display: inline-block;
-    background-color: lightgray;
+    
+    .white-tab {
+      background-color: white;
+    }
+    
+    .gray-tab {
+      margin: 0;
+      display: inline-block;
+      background-color: lightgray;
+    }
     
   }
   
@@ -138,61 +113,59 @@
     padding: 50px;
     border-radius: 0 0 40px 40px;
     border-bottom: 1px solid silver;
-  }
-  
-  .setting-list input {
-    font-size: 15px;
-  }
-  
-  .profile-images {
-    height: 120px;
-    width: auto;
-  }
-  
-  textarea.profile-text {
-    border-color: silver;
-    text-align: left;
-    padding: 0;
-    width: 500px;
-    height: 200px;
-    margin: 0;
-    font-size: 15px;
-  }
-  
-  .setting-list h3 {
-    cursor: pointer;
-    line-height: 60px;
-    margin: 0;
-  }
-  
-  .setting-list li {
-    padding-top: 10px;
-    margin: 10px 0;
-    font-size: 17px;
-  }
-  
-  .setting-box {
-    padding-bottom: 50px;
-    color: black;
     
-    a {
-      color: inherit;
+    input {
+      font-size: 15px;
+    }
+    
+    .profile-images {
+      height: 120px;
+      width: auto;
+    }
+    
+    h3 {
+      cursor: pointer;
+      line-height: 60px;
+      margin: 0;
+    }
+    
+    li {
+      padding-top: 10px;
+      margin: 10px 0;
+      font-size: 17px;
+    }
+    
+    textarea.profile-text {
+      border-color: silver;
+      width: 500px;
+      height: 200px;
+      font-size: 15px;
+    }
+    
+    .setting-btn {
+      background-color: #6e5b3b;
+      width: 100px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 20px;
+      color: white;
+      margin: 60px 50px 0px 50px;
+    }
+    
+    .empty {
+      padding: 10px;
+    }
+    
+    .setting-box {
+      padding-bottom: 50px;
+      color: black;
+      
+      a {
+        color: inherit;
+      }
     }
   }
   
-  .profile-btn {
-    background-color: #6e5b3b;
-    width: 100px;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 20px;
-    color: white;
-    margin: 60px 50px 0px 50px;
-  }
-  
-  .empty {
-    padding: 10px;
-  }
 }
 
 /* ここまでsetting */
