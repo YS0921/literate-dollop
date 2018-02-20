@@ -46,9 +46,11 @@ class UsersController < ApplicationController
   end
   
   def setting_profile
+    @user = User.find_by(id: params[:id])
   end
   
   def setting_account
+    @user = User.find_by(id: params[:id])
   end
   
   def update_profile
@@ -63,8 +65,9 @@ class UsersController < ApplicationController
   end
   
   def update_account
-    @current_user.email = params[:email]
-    if @current_user.save
+    @user = User.find_by(id: params[:id])
+    @user.email = params[:email]
+    if @user.save
       redirect_to("/")
     else
       render("users/setting_account")

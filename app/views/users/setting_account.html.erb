@@ -10,6 +10,9 @@
  
     <div class="setting-list">
       <div class="setting-box">
+        <% @user.errors.full_messages.each do |message| %>
+        <%=message %><br>
+        <% end %>
         <%=form_tag("/users/#{@current_user.id}/update_account") do %>
         <ul>
           <li>メールアドレス</li>
