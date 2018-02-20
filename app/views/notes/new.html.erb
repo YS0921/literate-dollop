@@ -3,7 +3,7 @@
   <div class="container">
     <div class="new-wrapper">
       <% @note.errors.full_messages.each do |message| %>
-      <%=message %>
+      <%=message %><br>
       <% end %>
       
       <%=form_tag("/notes/create") do %>
