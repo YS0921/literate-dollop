@@ -7,12 +7,16 @@ class NotesController < ApplicationController
   end
 
   def new
+    @note = Note.new
   end
 
   def create
     @note = Note.new(content: params[:note], user_id: @current_user.id)
-    @note.save
-    redirect_to("/")
+    if @note.save
+      redirect_to("/")
+    else
+      render("notes/new")
+    end
   end
 
   def editor

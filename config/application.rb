@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# i18n(gem)による日本語化
+I18n.config.available_locales = :ja
+I18n.default_locale = :ja
+
 module HelloApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
